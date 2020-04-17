@@ -1,0 +1,54 @@
+/*=================================
+  footer styling starts here
+=================================*/
+
+footer {
+
+  .wrapper {
+    padding: 25px;
+    @include flex(row,null,space-between);
+  }
+    
+  background: $blackShade;
+    
+  p {
+    margin: 15px 0;
+    @include textcharacteristics($text-color,13px,600);
+    float: left;
+  }
+
+  .social-icons {
+    float: right;
+  
+    a { text-indent: -9999px; }
+  }
+}
+    
+.facebook::before,
+.twitter::before,
+.googleplus::before,
+.linkedin::before {
+  padding: 9px;
+  background: $primary-color;
+}
+
+.facebook::before {
+  padding: 9px 12px;
+  @include pseudoElement(left,'\f09a',null,$white);
+}
+
+.twitter::before {
+  @include pseudoElement(left,'\f099',null,$white);
+}
+
+.googleplus::before {
+  @include pseudoElement(left,'\f0d5',null,$white);
+}
+
+.linkedin::before {
+  @include pseudoElement(left,'\f0e1',null,$white);
+}
+  
+  /*=================================
+    footer styling ends here
+  =================================*/

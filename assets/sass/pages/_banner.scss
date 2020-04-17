@@ -1,0 +1,53 @@
+/*=================================
+  Banner styling starts here
+=================================*/
+
+.banner {
+  @include backgroundchange (url('https://via.placeholder.com/1350x677/2d3950/00?text=STRICT'),center,cover);
+  h2 {
+    padding: 163px 0 0;
+    margin-bottom: 32px;
+    @include textcharacteristics(white,105px,700);
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  &-txt h2 {
+    &::after {
+      width: 53%;
+      height: 2px;
+      margin: 0 auto;
+      background: $primary-color;
+      left: 25%;
+      @include pseudoElement(left,'');
+      position: absolute;
+      display: block;
+    }
+  }
+
+  & p {
+    margin-bottom: 52px;
+    @include textcharacteristics(white,16px,600);
+  }
+  
+  & .action {
+    padding: 13.5px 27.5px;
+    margin-bottom: 150px;
+    color: $white;
+    border: 1px solid $primary-color;
+  }
+  
+  &-drop {
+    margin-bottom: 57px;
+    text-indent: -9999px;
+    &::before {
+      padding: 10px 15px;
+      @include pseudoElement('\f107',left);
+      @include textcharacteristics(white,30px,100);
+    } 
+  }
+  text-align: center;
+}
+  /*=================================
+    Banner styling ends here
+  =================================*/

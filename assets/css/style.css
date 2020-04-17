@@ -1,0 +1,747 @@
+@charset "UTF-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* 1.2. Clear Fix
+	========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 69.5%;
+  margin: 0 auto;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+header {
+  padding: 22px 0 21px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*=================================
+    Header styling ends here
+  =================================*/
+/*=================================
+  Banner styling starts here
+=================================*/
+.banner {
+  background-image: url("https://via.placeholder.com/1350x677/2d3950/00?text=STRICT");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.banner h2 {
+  padding: 163px 0 0;
+  margin-bottom: 32px;
+  color: white;
+  font-size: 105px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.banner-txt h2::after {
+  width: 53%;
+  height: 2px;
+  margin: 0 auto;
+  background: #15a4fa;
+  left: 25%;
+  content: '';
+  float: left;
+  position: absolute;
+  display: block;
+}
+
+.banner p {
+  margin-bottom: 52px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.banner .action {
+  padding: 13.5px 27.5px;
+  margin-bottom: 150px;
+  color: #fff;
+  border: 1px solid #15a4fa;
+}
+
+.banner-drop {
+  margin-bottom: 57px;
+  text-indent: -9999px;
+}
+
+.banner-drop::before {
+  padding: 10px 15px;
+  content: left;
+  float: "";
+  font-family: fontAwesome;
+  text-indent: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/*=================================
+    Banner styling ends here
+  =================================*/
+/*=================================
+  Design styling starts here
+=================================*/
+.design {
+  padding: 67px 0 88px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.design h3 {
+  margin-bottom: 21px;
+  color: #2d3950;
+  font-size: 34px;
+  font-weight: 100;
+}
+
+.design p {
+  color: #75787e;
+  font-size: 17px;
+  font-weight: 1.5;
+}
+
+/*=================================
+    Design styling ends here
+  =================================*/
+/*=================================
+  Services styling starts here
+=================================*/
+.services {
+  padding: 54px 0 50px;
+  background: #fff;
+}
+
+.services ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.service {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-preferred-size: 33%;
+  flex-basis: 33%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.service a {
+  margin-bottom: 25px;
+  position: relative;
+  text-indent: -9999px;
+}
+
+.service a::after {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #48baff), color-stop(50%, #5fc3ff));
+  background-image: linear-gradient(to right, #48baff 50%, #5fc3ff 50%);
+  color: white;
+  font-size: 60px;
+  font-weight: 100;
+  z-index: 1;
+}
+
+.service:first-of-type a::after {
+  padding: 11.5px 27px;
+  content: "";
+  float: left;
+  font-size: 68px;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.service:nth-of-type(2) a::after {
+  padding: 22.5px 21px;
+  content: "";
+  float: left;
+  font-size: 38px;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.service:nth-of-type(3) a::after {
+  padding: 24px 22.5px;
+  content: "";
+  float: left;
+  font-size: 35px;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.service h4 {
+  margin-bottom: 16px;
+  color: #2d3950;
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.service p {
+  width: 90%;
+  color: #969797;
+  font-size: 13.5px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+.service:first-of-type p {
+  width: 80%;
+}
+
+/*=================================
+   Services styling ends here
+  =================================*/
+/*=================================
+  Showcase styling starts here
+=================================*/
+.showcase {
+  padding: 67px 0 85px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.showcase h3 {
+  margin-bottom: 16px;
+  color: #2d3950;
+  font-size: 34px;
+  font-weight: 100;
+}
+
+.showcase span {
+  display: inline-block;
+  margin-bottom: 65px;
+  color: #969797;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.showcase .work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.showcase li {
+  margin: 1px -1.6%;
+  margin-bottom: 24px;
+  width: 32.29%;
+  position: relative;
+  background: rgba(0, 0, 255, 0.5);
+}
+
+.showcase li img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.showcase-links {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.showcase-links a {
+  text-indent: -9999px;
+}
+
+.magnify::before, .work-link::before {
+  padding: 9px;
+  margin: 0 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+  border: 1px solid #fff;
+  content: "";
+  float: left;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.work-link::before {
+  content: "";
+  float: left;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+/*=================================
+    Showcase styling ends here
+  =================================*/
+/*=================================
+  Contact styling starts here
+=================================*/
+.contact {
+  padding: 60px 0 89px;
+  text-align: center;
+  background-image: url("https://via.placeholder.com/1351x591/00/FFFFFF");
+  background-position: center;
+  background-size: cover;
+}
+
+.contact h3 {
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 100;
+}
+
+.contact span {
+  display: inline-block;
+  margin-bottom: 34px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+form .form-group {
+  width: 49.7%;
+  margin: 8px 0;
+}
+
+form .form-group input {
+  width: 96%;
+  padding: 16.5px 0 16.5px 16px;
+}
+
+form .form-group textarea {
+  width: 96.5%;
+  padding: 18px 0 0 16px;
+  max-height: 116px;
+  resize: none;
+}
+
+.form-control {
+  width: 50%;
+  margin: 4px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.form-control a {
+  padding: 9.5px 42px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #15a4fa;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.form-control .checkbox {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: capitalize;
+  word-spacing: 0.2px;
+}
+
+.form-control .checkbox input {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/*=================================
+    Contact styling ends here
+  =================================*/
+/*=================================
+  footer styling starts here
+=================================*/
+footer {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+footer .wrapper {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+footer p {
+  margin: 15px 0;
+  color: #969797;
+  font-size: 13px;
+  font-weight: 600;
+  float: left;
+}
+
+footer .social-icons {
+  float: right;
+}
+
+footer .social-icons a {
+  text-indent: -9999px;
+}
+
+.facebook::before,
+.twitter::before,
+.googleplus::before,
+.linkedin::before {
+  padding: 9px;
+  background: #15a4fa;
+}
+
+.facebook::before {
+  padding: 9px 12px;
+  content: "";
+  float: left;
+  color: #fff;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.twitter::before {
+  content: "";
+  float: left;
+  color: #fff;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.googleplus::before {
+  content: "";
+  float: left;
+  color: #fff;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+.linkedin::before {
+  content: "";
+  float: left;
+  color: #fff;
+  font-family: fontAwesome;
+  text-indent: 0;
+}
+
+/*=================================
+    footer styling ends here
+  =================================*/
+/*media query starts*/
+@media only screen and (min-width: 1024px) {
+  .action:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    color: var(--primary-color);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  .banner-drop:hover::before {
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  .service a:hover::after {
+    transition: -3s ease;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .magnify:hover::before, .work-link:hover::before,
+  .work-link:hover::before {
+    background: #fff;
+    color: var(--primary-color);
+  }
+  .work li:hover img {
+    opacity: 0.2;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  .work li:hover .showcase-links {
+    opacity: 1;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  .form-control a:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    color: var(--primary-color);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  .social-icons .facebook:hover::before,
+  .twitter:hover::before,
+  .googleplus:hover::before,
+  .linkedin:hover::before {
+    color: var(--secondary-color);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+}
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+  .banner-txt h2 {
+    font-size: 5rem;
+  }
+  .service {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 50px;
+  }
+  .service:last-of-type {
+    margin: 0 auto;
+  }
+  .service p:first-of-type {
+    width: 40%;
+  }
+  .service p {
+    width: 40%;
+  }
+  .work li {
+    width: 50%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-control {
+    width: 100%;
+  }
+}
+
+/*media query for 767px starts here*/
+@media only screen and (max-width: 767px) {
+  .banner-txt {
+    margin: 0 auto;
+  }
+  .services ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .service:first-of-type,
+  .service:nth-of-type(2),
+  .service:nth-of-type(3) {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .work li {
+    width: 100%;
+  }
+  .form-control {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .checkbox {
+    margin-bottom: 20px;
+  }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .service {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .work li {
+    width: 100%;
+  }
+  footer p,
+  footer .social-icons {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

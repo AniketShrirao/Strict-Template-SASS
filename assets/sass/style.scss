@@ -1,0 +1,15 @@
+// utilities Styles
+@import "utilities/reset";
+@import "utilities/common";
+@import "utilities/variable";
+@import "utilities/mixin";
+// Pages Styles
+@import "pages/header";
+@import "pages/banner";
+@import "pages/design";
+@import "pages/services";
+@import "pages/showcase";
+@import "pages/contact";
+@import "pages/footer";
+// media Queries Styles
+@import "pages/mediaQueries";

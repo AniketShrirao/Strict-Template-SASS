@@ -1,0 +1,70 @@
+/*=================================
+  Contact styling starts here
+=================================*/
+
+.contact {
+    padding: 60px 0 89px;
+    text-align: center;
+    @include backgroundchange(url('https://via.placeholder.com/1351x591/00/FFFFFF'),center,cover);
+  
+  h3 {
+    margin-bottom: 16px;
+    @include textcharacteristics($white,$primary-size);
+  }
+  
+  span {
+    display: inline-block;
+    margin-bottom: 34px;
+    @include textcharacteristics($white,$secondary-size);
+  }
+
+}
+  
+form {
+  @include flex (column,null,center,center,wrap);
+
+  .form-group {
+    width: 49.7%;
+    margin: 8px 0;
+    
+    input {
+      width: 96%;
+      padding: 16.5px 0 16.5px 16px;
+    }
+  
+    textarea {
+      width: 96.5%;
+      padding: 18px 0 0 16px;
+      max-height: 116px;
+      resize: none;
+    }
+  }
+}
+
+.form-control {
+  width: 50%;
+  margin: 4px auto;
+  @include flex (row,null,space-between,center,wrap);
+
+  a {
+    padding: 9.5px 42px;
+    @include textcharacteristics($white,16px,600,null,1px solid $primary-color);
+    border-radius: 4px;
+    text-align: center;
+    text-transform: capitalize;
+  }  
+
+  .checkbox {
+    @include textcharacteristics($white,14px,600,1,null);
+    text-transform: capitalize;
+    word-spacing: 0.2px;
+
+    input {
+      @include transform(scale(1.2));
+    }
+  }
+}
+  
+  /*=================================
+    Contact styling ends here
+  =================================*/

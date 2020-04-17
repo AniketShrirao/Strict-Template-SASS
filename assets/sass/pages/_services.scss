@@ -1,0 +1,60 @@
+/*=================================
+  Services styling starts here
+=================================*/
+
+.services {
+  padding: 54px 0 50px;
+  background: $white;
+
+  & ul { @include flex($wrap:wrap); }
+}
+
+.service {
+  text-align: center;
+  @include flex(column,33%,center,center);
+
+  a {
+    margin-bottom: 25px;
+    position: relative;
+    text-indent: -9999px;
+  }
+
+  & a::after {
+    @include backgroundchange(linear-gradient($grad1));
+    @include textcharacteristics(white,60px,100);
+    z-index: 1;
+  }
+
+
+  &:first-of-type a::after {
+    padding: 11.5px 27px;
+    @include pseudoElement (left,'\f10b',68px);
+  }
+
+  &:nth-of-type(2) a::after {
+    padding: 22.5px 21px;
+    @include pseudoElement (left,'\f1d8',38px);
+  }
+
+  &:nth-of-type(3) a::after {
+    padding: 24px 22.5px;
+    @include pseudoElement (left,'\f0a1',35px);
+  }
+
+  h4 {
+    margin-bottom: 16px;
+    @include textcharacteristics($secondary-color,18px,100);
+    text-transform: capitalize;
+  }
+
+  p {
+    width: 90%;
+    @include textcharacteristics($text-color,13.5px,100,1.4);
+  }
+
+  &:first-of-type p { width: 80%; }
+}
+
+  /*=================================
+   Services styling ends here
+  =================================*/

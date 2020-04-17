@@ -1,0 +1,28 @@
+/*=================================
+  Design styling starts here
+=================================*/
+
+.design {
+    padding: 67px 0 88px;
+    background: $lightShade;
+    text-align: center;
+  }
+  
+  .design h3 {
+    margin-bottom: 21px;
+    @include textcharacteristics(
+      $secondary-color,
+      $primary-size
+    ); 
+  }
+  
+  .design p { @include textcharacteristics(
+    $second-text-color,
+    17px,
+    1.5
+    );}
+  
+  /*=================================
+    Design styling ends here
+  =================================*/
+  

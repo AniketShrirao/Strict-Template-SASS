@@ -1,0 +1,101 @@
+
+// box Sizing mixin
+@mixin boxsizing {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// common text properties mixin
+@mixin textcharacteristics($color,$fontsize:16px,$fontweight:100,$line:null,$border:null) {
+  color: $color;
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  line-height: $line;
+  border:$border;
+}
+
+// common background properties mixin
+@mixin backgroundchange($image:null,$position:null,$size:null,$color:null,$gradient:null) {
+  @if($gradient == null) {
+    background: {
+      image :$image;
+      position: $position;
+      size: $size;
+      color: $color;
+    };
+  } @else {
+    background: -webkit-gradient($grad2);
+    background: $gradient;
+  }
+}
+
+// pseudoElement mixin
+@mixin  pseudoElement($float,$content:null,$fontsize:null,$color:null) {
+  @if($content == '') {
+    content: '';    
+    float: $float;
+  } @else {
+  content: $content;
+  float: $float;
+  color: $color;
+  font-size: $fontsize;
+  font-family: fontAwesome;
+  text-indent: 0;
+  }
+}
+
+// make content center Mixin
+@mixin centerize {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+// overlay Mixin
+@mixin overlay {
+  @include transition(.5s ease);
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+// flex Mixin
+@mixin flex($direction:null,$basis:null,$justify:null,$alignitem:null,$wrap:null) {
+  display : -webkit-box;
+  display : -ms-flexbox;
+  display : flex;
+  flex-direction: $direction;
+  @if($direction == column) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction:$direction;
+  } @else {
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:$direction;
+  }
+  -webkit-box-pack: $justify;
+  -ms-flex-pack: $justify;
+  justify-content: $justify;
+  -ms-flex-preferred-size: $basis;
+  flex-basis: $basis;
+  -webkit-box-align: $alignitem;
+  -ms-flex-align: $alignitem;
+  align-items: $alignitem;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+// transitions & transform mixin
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
